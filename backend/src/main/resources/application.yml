@@ -15,6 +15,8 @@ face:
   recognition:
     threshold: 0.6
     embedding-dim: 512
+    detector-model: classpath:models/face_detector.onnx
+    embedder-model: classpath:models/face_embedder.onnx
   access:
     cooldown-minutes: 5
     feedback-seconds: 3
