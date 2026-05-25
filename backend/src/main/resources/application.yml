@@ -2,9 +2,6 @@ spring:
   application:
     name: faceaccess
   datasource:
-    url: jdbc:mysql://localhost:3306/faceaccess?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
-    username: faceaccess
-    password: faceaccess
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:
