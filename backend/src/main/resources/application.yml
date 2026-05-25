@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: faceaccess
+
+face:
+  recognition:
+    threshold: 0.6
+    embedding-dim: 512
+  access:
+    cooldown-minutes: 5
+    feedback-seconds: 3
+    recognize-interval-ms: 800
+
+storage:
+  type: local
+  local-path: ./data/faces
+  gcs-bucket: ${GCS_BUCKET:}
