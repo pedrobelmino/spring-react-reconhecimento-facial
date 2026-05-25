@@ -1,8 +1,18 @@
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import ClienteListPage from './routes/ClienteListPage';
+import EntradaPage from './routes/EntradaPage';
+import LoginPage from './routes/LoginPage';
+
 function App() {
   return (
-    <main className="min-h-screen bg-gray-50 flex items-center justify-center">
-      <h1 className="text-2xl font-semibold text-gray-900">Academia Face Access</h1>
-    </main>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<div>Home</div>} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/admin/clientes" element={<ClienteListPage />} />
+        <Route path="/entrada" element={<EntradaPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
