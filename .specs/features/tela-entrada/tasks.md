@@ -90,8 +90,8 @@ T7 → T9 (smoke + UAT manual)
 
 **Done when:**
 
-- [ ] Types `RecognizeResponse` alinhados ao Java DTO
-- [ ] Gate: `accessApi.test.ts` → ≥3 tests pass
+- [x] Types `RecognizeResponse` alinhados ao Java DTO
+- [x] Gate: `accessApi.test.ts` → ≥3 tests pass
 
 **Tests:** unit  
 **Gate:** quick-frontend

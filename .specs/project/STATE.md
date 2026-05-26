@@ -1,7 +1,7 @@
 # State
 
 **Last Updated:** 2026-05-25
-**Current Work:** tela-entrada backend T1–T2 concluídos — próximo: T3 (accessApi) + T6 (useRecognitionLoop)
+**Current Work:** tela-entrada T3 (accessApi) concluído — próximo: T6 (useRecognitionLoop) ou cadastro T7+
 
 ---
 
@@ -83,7 +83,7 @@ _Nenhuma lição registrada ainda._
 
 - [ ] **Linear:** autenticar plugin MCP ou rodar `scripts/sync-linear-tasks.mjs`
 - [ ] Executar cadastro-clientes-faces T5-T15 (T5–T6 ✅)
-- [ ] Executar entrada T3-T9 (T1–T2 ✅ backend, T4–T5 ✅ frontend)
+- [ ] Executar entrada T6-T9 (T1–T3 ✅ backend+api, T4–T5 ✅ frontend)
 
 ---
 
