@@ -300,9 +300,9 @@ T11 + T14 → T15 (integration smoke)
 
 **Done when:**
 
-- [ ] Modo create e edit
-- [ ] Validação CPF client-side + erros API
-- [ ] Gate: `ClienteFormPage.test.tsx` → ≥5 tests pass
+- [x] Modo create e edit
+- [x] Validação CPF client-side + erros API
+- [x] Gate: `ClienteFormPage.test.tsx` → ≥5 tests pass
 
 **Tests:** unit  
 **Gate:** quick-frontend

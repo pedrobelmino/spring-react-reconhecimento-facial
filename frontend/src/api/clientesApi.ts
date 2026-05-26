@@ -12,6 +12,10 @@ export async function listar(q?: string): Promise<ClienteSummary[]> {
   return apiGet<ClienteSummary[]>(path);
 }
 
+export async function buscar(id: number): Promise<Cliente> {
+  return apiGet<Cliente>(`/api/clientes/${id}`);
+}
+
 export async function criar(request: CreateClienteRequest): Promise<Cliente> {
   return apiPost<Cliente>('/api/clientes', request);
 }
