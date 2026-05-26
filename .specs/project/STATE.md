@@ -1,7 +1,7 @@
 # State
 
 **Last Updated:** 2026-05-25
-**Current Work:** cadastro-clientes-faces T12 (ClienteListPage) concluído — próximo: T13 ClienteFormPage
+**Current Work:** tela-entrada T7 (EntradaPage) concluído — próximo: T8 useAccessSound
 
 ---
 
@@ -83,7 +83,7 @@ _Nenhuma lição registrada ainda._
 
 - [ ] **Linear:** autenticar plugin MCP ou rodar `scripts/sync-linear-tasks.mjs`
 - [ ] Executar cadastro-clientes-faces T5-T15 (T5–T6, T7 ✅, T8 ✅, T9 ✅, T11 ✅, T12 ✅, T14 ✅)
-- [ ] Executar entrada T7-T9 (T1–T6 ✅)
+- [ ] Executar entrada T7-T9 (T1–T7 ✅)
 
 ---
 

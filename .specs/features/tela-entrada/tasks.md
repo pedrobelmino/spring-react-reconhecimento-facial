@@ -171,9 +171,9 @@ T7 → T9 (smoke + UAT manual)
 
 **Done when:**
 
-- [ ] Layout fullscreen Tailwind
-- [ ] Banner base vazia se `operacional=false`
-- [ ] Gate: `EntradaPage.test.tsx` → ≥4 tests pass
+- [x] Layout fullscreen Tailwind
+- [x] Banner base vazia se `operacional=false`
+- [x] Gate: `EntradaPage.test.tsx` → ≥4 tests pass
 
 **Tests:** unit  
 **Gate:** quick-frontend

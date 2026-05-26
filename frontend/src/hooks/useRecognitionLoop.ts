@@ -19,6 +19,8 @@ export interface UseRecognitionLoopResult {
   feedback: RecognitionFeedback | null;
   multiFaceWarning: boolean;
   cameraOnline: boolean;
+  cameraError: string | null;
+  videoRef: ReturnType<typeof useWebcam>['videoRef'];
   retry: () => void;
 }
 
@@ -31,7 +33,7 @@ export function useRecognitionLoop(
   const intervalMs = options.intervalMs ?? DEFAULT_INTERVAL_MS;
   const feedbackSeconds = options.feedbackSeconds ?? DEFAULT_FEEDBACK_SECONDS;
 
-  const { captureFrame, start, stop, error, isReady } = useWebcam();
+  const { videoRef, captureFrame, start, stop, error, isReady } = useWebcam();
   const [feedback, setFeedback] = useState<RecognitionFeedback | null>(null);
   const [multiFaceWarning, setMultiFaceWarning] = useState(false);
 
@@ -108,5 +110,5 @@ export function useRecognitionLoop(
     return () => clearInterval(id);
   }, [captureFrame, isReady, intervalMs, feedbackSeconds]);
 
-  return { feedback, multiFaceWarning, cameraOnline, retry };
+  return { feedback, multiFaceWarning, cameraOnline, cameraError: error, videoRef, retry };
 }
