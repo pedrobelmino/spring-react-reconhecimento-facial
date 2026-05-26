@@ -278,10 +278,10 @@ T11 + T14 → T15 (integration smoke)
 
 **Done when:**
 
-- [ ] Lista ordenada alfabeticamente
-- [ ] Toggle ativo/inativo
-- [ ] Busca por nome/CPF
-- [ ] Gate: `ClienteListPage.test.tsx` → ≥5 tests pass
+- [x] Lista ordenada alfabeticamente
+- [x] Toggle ativo/inativo
+- [x] Busca por nome/CPF
+- [x] Gate: `ClienteListPage.test.tsx` → ≥5 tests pass
 
 **Tests:** unit  
 **Gate:** quick-frontend

@@ -1,7 +1,7 @@
 # State
 
 **Last Updated:** 2026-05-25
-**Current Work:** tela-entrada T6 (useRecognitionLoop) concluído — próximo: T7 EntradaPage
+**Current Work:** cadastro-clientes-faces T12 (ClienteListPage) concluído — próximo: T13 ClienteFormPage
 
 ---
 
@@ -82,7 +82,7 @@ _Nenhuma lição registrada ainda._
 ## Todos
 
 - [ ] **Linear:** autenticar plugin MCP ou rodar `scripts/sync-linear-tasks.mjs`
-- [ ] Executar cadastro-clientes-faces T5-T15 (T5–T6, T7 ✅, T8 ✅, T9 ✅, T11 ✅, T14 ✅)
+- [ ] Executar cadastro-clientes-faces T5-T15 (T5–T6, T7 ✅, T8 ✅, T9 ✅, T11 ✅, T12 ✅, T14 ✅)
 - [ ] Executar entrada T7-T9 (T1–T6 ✅)
 
 ---
