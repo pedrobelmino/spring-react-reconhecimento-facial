@@ -150,9 +150,9 @@ T7 → T9 (smoke + UAT manual)
 
 **Done when:**
 
-- [ ] Pausa durante feedback
-- [ ] Ignora frames com faceCount > 1
-- [ ] Gate: `useRecognitionLoop.test.ts` → ≥6 tests pass
+- [x] Pausa durante feedback
+- [x] Ignora frames com faceCount > 1
+- [x] Gate: `useRecognitionLoop.test.ts` → ≥6 tests pass
 
 **Tests:** unit  
 **Gate:** quick-frontend

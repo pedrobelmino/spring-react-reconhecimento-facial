@@ -1,7 +1,7 @@
 # State
 
 **Last Updated:** 2026-05-25
-**Current Work:** cadastro-clientes-faces T14 (facesApi module) concluído — próximo: T15 Cadastro integration smoke
+**Current Work:** tela-entrada T6 (useRecognitionLoop) concluído — próximo: T7 EntradaPage
 
 ---
 
@@ -83,7 +83,7 @@ _Nenhuma lição registrada ainda._
 
 - [ ] **Linear:** autenticar plugin MCP ou rodar `scripts/sync-linear-tasks.mjs`
 - [ ] Executar cadastro-clientes-faces T5-T15 (T5–T6, T7 ✅, T8 ✅, T9 ✅, T11 ✅, T14 ✅)
-- [ ] Executar entrada T6-T9 (T1–T3 ✅ backend+api, T4–T5 ✅ frontend)
+- [ ] Executar entrada T7-T9 (T1–T6 ✅)
 
 ---
 
