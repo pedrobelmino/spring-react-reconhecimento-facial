@@ -74,9 +74,9 @@ T11 + T14 → T15 (integration smoke)
 
 **Done when:**
 
-- [ ] `AuthProvider` wrap App
-- [ ] `useAuth` expõe login/logout/user
-- [ ] Gate: `useAuth.test.ts` → ≥4 tests pass
+- [x] `AuthProvider` wrap App
+- [x] `useAuth` expõe login/logout/user
+- [x] Gate: `useAuth.test.ts` → ≥4 tests pass
 
 **Tests:** unit  
 **Gate:** quick-frontend
