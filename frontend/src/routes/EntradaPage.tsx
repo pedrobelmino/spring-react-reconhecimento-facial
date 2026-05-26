@@ -2,11 +2,13 @@ import { useEffect, useState } from 'react';
 import * as accessApi from '../api/accessApi';
 import { AccessFeedbackOverlay } from '../components/AccessFeedbackOverlay';
 import { CameraStatusIndicator } from '../components/CameraStatusIndicator';
+import { useAccessSound } from '../hooks/useAccessSound';
 import { useRecognitionLoop } from '../hooks/useRecognitionLoop';
 
 export default function EntradaPage() {
   const { feedback, multiFaceWarning, cameraOnline, cameraError, videoRef, retry } =
     useRecognitionLoop();
+  const { playForOutcome } = useAccessSound();
   const [operacional, setOperacional] = useState(true);
 
   useEffect(() => {
@@ -14,6 +16,12 @@ export default function EntradaPage() {
       setOperacional(status.operacional);
     });
   }, []);
+
+  useEffect(() => {
+    if (feedback?.visible) {
+      playForOutcome(feedback.outcome);
+    }
+  }, [feedback, playForOutcome]);
 
   return (
     <div

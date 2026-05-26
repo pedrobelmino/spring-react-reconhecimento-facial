@@ -192,8 +192,8 @@ T7 → T9 (smoke + UAT manual)
 
 **Done when:**
 
-- [ ] Sons distintos; disabled por default
-- [ ] Gate: `useAccessSound.test.ts` → ≥2 tests pass
+- [x] Sons distintos; disabled por default
+- [x] Gate: `useAccessSound.test.ts` → ≥2 tests pass
 
 **Tests:** unit  
 **Gate:** quick-frontend

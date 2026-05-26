@@ -1,7 +1,7 @@
 # State
 
 **Last Updated:** 2026-05-25
-**Current Work:** tela-entrada T7 (EntradaPage) concluído — próximo: T8 useAccessSound
+**Current Work:** tela-entrada T8 (useAccessSound) concluído — próximo: T9 smoke + UAT
 
 ---
 
@@ -83,7 +83,7 @@ _Nenhuma lição registrada ainda._
 
 - [ ] **Linear:** autenticar plugin MCP ou rodar `scripts/sync-linear-tasks.mjs`
 - [ ] Executar cadastro-clientes-faces T5-T15 (T5–T6, T7 ✅, T8 ✅, T9 ✅, T10 ✅, T11 ✅, T12 ✅, T13 ✅, T14 ✅)
-- [ ] Executar entrada T7-T9 (T1–T7 ✅)
+- [ ] Executar entrada T7-T9 (T1–T8 ✅)
 
 ---
 
