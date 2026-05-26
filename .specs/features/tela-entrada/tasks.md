@@ -47,10 +47,10 @@ T7 → T9 (smoke + UAT manual)
 
 **Done when:**
 
-- [ ] LIBERADO: max 1 evento/5min por cliente
-- [ ] NEGADO desconhecido: cooldown global 5 min
-- [ ] NEGADO inativo: sempre registra
-- [ ] Gate: `AccessEventServiceTest` → ≥8 tests pass
+- [x] LIBERADO: max 1 evento/5min por cliente
+- [x] NEGADO desconhecido: cooldown global 5 min
+- [x] NEGADO inativo: sempre registra
+- [x] Gate: `AccessEventServiceTest` → ≥8 tests pass
 
 **Tests:** unit  
 **Gate:** quick-backend
@@ -69,9 +69,9 @@ T7 → T9 (smoke + UAT manual)
 
 **Done when:**
 
-- [ ] Recognize retorna outcome, nome, fotoUrl, eventoRegistrado, faceCount
-- [ ] Cliente inativo → NEGADO + CLIENTE_INATIVO
-- [ ] Gate: `AccessControllerWebTest` → ≥8 tests pass
+- [x] Recognize retorna outcome, nome, fotoUrl, eventoRegistrado, faceCount
+- [x] Cliente inativo → NEGADO + CLIENTE_INATIVO
+- [x] Gate: `AccessControllerWebTest` → ≥8 tests pass
 
 **Tests:** integration  
 **Gate:** full-backend

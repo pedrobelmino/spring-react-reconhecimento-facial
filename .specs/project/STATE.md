@@ -1,7 +1,7 @@
 # State
 
 **Last Updated:** 2026-05-25
-**Current Work:** cadastro-clientes-faces T5–T6 concluídos — próximo: T7/T8 (paralelo) ou auth frontend T1–T4
+**Current Work:** tela-entrada backend T1–T2 concluídos — próximo: T3 (accessApi) + T6 (useRecognitionLoop)
 
 ---
 
@@ -83,7 +83,7 @@ _Nenhuma lição registrada ainda._
 
 - [ ] **Linear:** autenticar plugin MCP ou rodar `scripts/sync-linear-tasks.mjs`
 - [ ] Executar cadastro-clientes-faces T1-T15 (T5–T6 ✅)
-- [ ] Executar entrada T1-T9 (T4 AccessFeedbackOverlay ✅, T5 CameraStatusIndicator ✅)
+- [ ] Executar entrada T3-T9 (T1–T2 ✅ backend, T4–T5 ✅ frontend)
 
 ---
 
