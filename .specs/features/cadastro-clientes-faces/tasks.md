@@ -238,8 +238,8 @@ T11 + T14 → T15 (integration smoke)
 
 **Done when:**
 
-- [ ] Não avança slot sem validação OK
-- [ ] Gate: `FaceCaptureWizard.test.tsx` → ≥4 tests pass
+- [x] Não avança slot sem validação OK
+- [x] Gate: `FaceCaptureWizard.test.tsx` → ≥4 tests pass
 
 **Tests:** unit  
 **Gate:** quick-frontend
