@@ -1,7 +1,7 @@
 # State
 
 **Last Updated:** 2026-05-25
-**Current Work:** tela-entrada T4–T5 concluídos — próximo: T3/T6 ou backend entrada T1–T2
+**Current Work:** cadastro-clientes-faces T5–T6 concluídos — próximo: T7/T8 (paralelo) ou auth frontend T1–T4
 
 ---
 
