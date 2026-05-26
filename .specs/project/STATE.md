@@ -1,7 +1,7 @@
 # State
 
 **Last Updated:** 2026-05-25
-**Current Work:** cadastro-clientes-faces T8 (FaceValidationController) concluído — próximo: T9 WebcamCapture ou T12 ClienteListPage
+**Current Work:** cadastro-clientes-faces T9 (WebcamCapture) concluído — próximo: T10 FaceCaptureWizard ou T12 ClienteListPage
 
 ---
 
@@ -82,7 +82,7 @@ _Nenhuma lição registrada ainda._
 ## Todos
 
 - [ ] **Linear:** autenticar plugin MCP ou rodar `scripts/sync-linear-tasks.mjs`
-- [ ] Executar cadastro-clientes-faces T5-T15 (T5–T6, T7 ✅, T8 ✅, T11 ✅)
+- [ ] Executar cadastro-clientes-faces T5-T15 (T5–T6, T7 ✅, T8 ✅, T9 ✅, T11 ✅)
 - [ ] Executar entrada T6-T9 (T1–T3 ✅ backend+api, T4–T5 ✅ frontend)
 
 ---

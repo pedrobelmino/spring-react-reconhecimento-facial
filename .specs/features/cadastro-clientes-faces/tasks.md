@@ -217,9 +217,9 @@ T11 + T14 → T15 (integration smoke)
 
 **Done when:**
 
-- [ ] Render preview + botão "Capturar"
-- [ ] `onCapture(base64)` callback
-- [ ] Gate: `WebcamCapture.test.tsx` → ≥3 tests pass
+- [x] Render preview + botão "Capturar"
+- [x] `onCapture(base64)` callback
+- [x] Gate: `WebcamCapture.test.tsx` → ≥3 tests pass
 
 **Tests:** unit  
 **Gate:** quick-frontend
@@ -321,8 +321,8 @@ T11 + T14 → T15 (integration smoke)
 
 **Done when:**
 
-- [ ] Tipagem `FaceValidationResponse`
-- [ ] Gate: `facesApi.test.ts` → ≥2 tests pass
+- [x] Tipagem `FaceValidationResponse`
+- [x] Gate: `facesApi.test.ts` → ≥2 tests pass
 
 **Tests:** unit  
 **Gate:** quick-frontend
