@@ -341,8 +341,8 @@ T11 + T14 → T15 (integration smoke)
 
 **Done when:**
 
-- [ ] Fluxo manual documentado: login → cadastrar → listar
-- [ ] `npm run build` + `mvn verify` passam
+- [x] Fluxo manual documentado: login → cadastrar → listar
+- [x] `npm run build` + `mvn verify` passam
 
 **Tests:** none  
 **Gate:** build + full-backend + full-frontend
