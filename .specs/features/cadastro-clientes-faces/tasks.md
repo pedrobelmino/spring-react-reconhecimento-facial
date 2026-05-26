@@ -53,9 +53,9 @@ T11 + T14 → T15 (integration smoke)
 
 **Done when:**
 
-- [ ] Login válido cria sessão; inválido retorna 401 genérico
-- [ ] Logout invalida sessão
-- [ ] Gate: `AuthControllerWebTest` → ≥5 tests pass
+- [x] Login válido cria sessão; inválido retorna 401 genérico
+- [x] Logout invalida sessão
+- [x] Gate: `AuthControllerWebTest` → ≥5 tests pass
 
 **Tests:** integration  
 **Gate:** full-backend
