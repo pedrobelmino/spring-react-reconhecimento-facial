@@ -95,9 +95,9 @@ T11 + T14 → T15 (integration smoke)
 
 **Done when:**
 
-- [ ] `/admin/*` redirect `/login` se não autenticado
-- [ ] Login bem-sucedido → `/admin/clientes`
-- [ ] Gate: `LoginPage.test.tsx` → ≥3 tests pass
+- [x] `/admin/*` redirect `/login` se não autenticado
+- [x] Login bem-sucedido → `/admin/clientes`
+- [x] Gate: `LoginPage.test.tsx` → ≥3 tests pass
 
 **Tests:** unit  
 **Gate:** quick-frontend
