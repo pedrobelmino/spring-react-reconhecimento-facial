@@ -82,7 +82,7 @@ _Nenhuma lição registrada ainda._
 ## Todos
 
 - [ ] **Linear:** autenticar plugin MCP ou rodar `scripts/sync-linear-tasks.mjs`
-- [ ] Executar cadastro-clientes-faces T5-T15 (T5–T6, T11 ✅)
+- [ ] Executar cadastro-clientes-faces T5-T15 (T5–T6, T7 ✅, T11 ✅)
 - [ ] Executar entrada T6-T9 (T1–T3 ✅ backend+api, T4–T5 ✅ frontend)
 
 ---
