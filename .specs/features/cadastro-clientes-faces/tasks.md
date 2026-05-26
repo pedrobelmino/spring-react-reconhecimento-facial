@@ -116,8 +116,8 @@ T11 + T14 → T15 (integration smoke)
 
 **Done when:**
 
-- [ ] Navbar com link Clientes + botão Sair
-- [ ] Gate: `AdminLayout.test.tsx` → ≥2 tests pass
+- [x] Navbar com link Clientes + botão Sair
+- [x] Gate: `AdminLayout.test.tsx` → ≥2 tests pass
 
 **Tests:** unit  
 **Gate:** quick-frontend
