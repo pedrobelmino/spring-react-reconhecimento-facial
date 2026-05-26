@@ -177,8 +177,8 @@ T11 + T14 → T15 (integration smoke)
 
 **Done when:**
 
-- [ ] Mock `getUserMedia` nos tests
-- [ ] Gate: `useWebcam.test.ts` → ≥5 tests pass
+- [x] Mock `getUserMedia` nos tests
+- [x] Gate: `useWebcam.test.ts` → ≥5 tests pass
 
 **Tests:** unit  
 **Gate:** quick-frontend
@@ -258,8 +258,8 @@ T11 + T14 → T15 (integration smoke)
 
 **Done when:**
 
-- [ ] Types TypeScript alinhados aos DTOs Java
-- [ ] Gate: `clientesApi.test.ts` → ≥4 tests pass
+- [x] Types TypeScript alinhados aos DTOs Java
+- [x] Gate: `clientesApi.test.ts` → ≥4 tests pass
 
 **Tests:** unit  
 **Gate:** quick-frontend
