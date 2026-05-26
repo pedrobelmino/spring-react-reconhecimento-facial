@@ -197,8 +197,8 @@ T11 + T14 → T15 (integration smoke)
 
 **Done when:**
 
-- [ ] Sem rosto → valid=false; 2+ rostos → faceCount>1
-- [ ] Gate: `FaceValidationControllerWebTest` → ≥4 tests pass
+- [x] Sem rosto → valid=false; 2+ rostos → faceCount>1
+- [x] Gate: `FaceValidationControllerWebTest` → ≥4 tests pass
 
 **Tests:** integration  
 **Gate:** full-backend
