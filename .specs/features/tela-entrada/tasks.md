@@ -212,9 +212,9 @@ T7 → T9 (smoke + UAT manual)
 
 **Done when:**
 
-- [ ] `/entrada` acessível sem login
-- [ ] UAT checklist: liberado, negado, cooldown 5min documentado
-- [ ] `npm run build` + `mvn verify` passam
+- [x] `/entrada` acessível sem login
+- [x] UAT checklist: liberado, negado, cooldown 5min documentado
+- [x] `npm run build` + `mvn verify` passam
 
 **Tests:** none  
 **Gate:** build + full-backend + full-frontend
