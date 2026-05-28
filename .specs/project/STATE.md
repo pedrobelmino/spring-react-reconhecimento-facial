@@ -1,7 +1,7 @@
 # State
 
-**Last Updated:** 2026-05-25
-**Current Work:** cadastro-clientes-faces T1–T15 concluídos — próximo: tela-entrada T9 (smoke + UAT)
+**Last Updated:** 2026-05-28
+**Current Work:** MVP P1 concluído (platform + cadastro + entrada) — próximo: UAT manual ou Linear sync
 
 ---
 
@@ -82,8 +82,11 @@ _Nenhuma lição registrada ainda._
 ## Todos
 
 - [ ] **Linear:** autenticar plugin MCP ou rodar `scripts/sync-linear-tasks.mjs`
-- [x] Executar cadastro-clientes-faces T1–T15 ✅
-- [ ] Executar entrada T7-T9 (T1–T8 ✅)
+- [x] platform-foundation T1–T17
+- [x] cadastro-clientes-faces T1–T15
+- [x] tela-entrada T1–T9
+- [ ] UAT manual: `.specs/features/tela-entrada/UAT.md`
+- [ ] Modelos ONNX: `./scripts/download-face-models.sh` (inferência real)
 
 ---
 
