@@ -4,7 +4,9 @@ import ai.djl.ModelException;
 import ai.djl.inference.Predictor;
 import ai.djl.modality.cv.Image;
 import ai.djl.modality.cv.ImageFactory;
+import ai.djl.ndarray.NDArray;
 import ai.djl.ndarray.NDList;
+import ai.djl.ndarray.types.Shape;
 import ai.djl.repository.zoo.Criteria;
 import ai.djl.repository.zoo.ZooModel;
 import ai.djl.translate.Batchifier;
@@ -102,7 +104,10 @@ public class DjlFaceEmbedder implements FaceEmbedder, AutoCloseable {
 
         @Override
         public NDList processInput(TranslatorContext ctx, Image input) {
-            return new NDList(input.toNDArray(ctx.getNDManager()).expandDims(0));
+            BufferedImage source = (BufferedImage) input.getWrappedImage();
+            float[] chw = UltraLightFaceDetectorTranslator.imageToChw(source, 112, 112, 127.5f, 128f);
+            NDArray tensor = ctx.getNDManager().create(chw, new Shape(1, 3, 112, 112));
+            return new NDList(tensor);
         }
 
         @Override
@@ -123,7 +128,7 @@ public class DjlFaceEmbedder implements FaceEmbedder, AutoCloseable {
 
         @Override
         public Batchifier getBatchifier() {
-            return Batchifier.STACK;
+            return null;
         }
     }
 }

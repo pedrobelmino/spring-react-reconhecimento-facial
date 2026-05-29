@@ -6,6 +6,9 @@ import { AuthProvider, useAuth } from './useAuth';
 import * as authApi from '../api/authApi';
 
 vi.mock('../api/authApi');
+vi.mock('../api/client', () => ({
+  refreshCsrfToken: vi.fn().mockResolvedValue(undefined),
+}));
 
 const mockUser = {
   id: 1,

@@ -43,9 +43,23 @@ export default function FaceCaptureWizard({ photos, onChange }: FaceCaptureWizar
       const nextPhotos: [string | null, string | null] = [photos[0], photos[1]];
       nextPhotos[slotIndex] = base64;
       onChange(nextPhotos);
+    } catch (err) {
+      const message = err instanceof Error ? err.message : '';
+      if (message.includes('Unauthorized') || message.includes('403')) {
+        setError('Falha de autenticação. Recarregue a página ou faça login novamente.');
+      } else if (message.includes('500') || message.includes('Internal Server Error')) {
+        setError('Erro no servidor ao validar o rosto. Verifique se o backend está rodando.');
+      } else {
+        setError(message || 'Não foi possível validar a foto. Tente novamente.');
+      }
     } finally {
       setValidating(false);
     }
+  }
+
+  function handleRetake() {
+    onChange([null, null]);
+    setError(null);
   }
 
   return (
@@ -61,9 +75,18 @@ export default function FaceCaptureWizard({ photos, onChange }: FaceCaptureWizar
       )}
 
       {bothComplete ? (
-        <p data-testid="wizard-complete" className="text-sm text-green-700">
-          Fotos capturadas com sucesso
-        </p>
+        <div className="space-y-2">
+          <p data-testid="wizard-complete" className="text-sm text-green-700">
+            Fotos capturadas com sucesso
+          </p>
+          <button
+            type="button"
+            onClick={handleRetake}
+            className="text-sm font-medium text-indigo-600 hover:text-indigo-500"
+          >
+            Refazer fotos
+          </button>
+        </div>
       ) : (
         <>
           {validating && <p className="text-sm text-gray-600">Validando...</p>}

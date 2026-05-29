@@ -1,6 +1,7 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useState } from 'react';
 import type { ReactNode } from 'react';
 import * as authApi from '../api/authApi';
+import { refreshCsrfToken } from '../api/client';
 import type { AdminUser } from '../api/authApi';
 
 interface AuthContextValue {
@@ -45,13 +46,17 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   const login = useCallback(async (username: string, password: string) => {
     await authApi.login({ username, password });
+    await refreshCsrfToken();
     const currentUser = await authApi.me();
     setUser(currentUser);
   }, []);
 
   const logout = useCallback(async () => {
-    await authApi.logout();
-    setUser(null);
+    try {
+      await authApi.logout();
+    } finally {
+      setUser(null);
+    }
   }, []);
 
   const value = useMemo(

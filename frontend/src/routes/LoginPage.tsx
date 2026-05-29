@@ -21,11 +21,20 @@ export default function LoginPage() {
     setError(null);
     setSubmitting(true);
 
+    const formData = new FormData(event.currentTarget);
+    const submittedUsername = String(formData.get('username') ?? '').trim();
+    const submittedPassword = String(formData.get('password') ?? '');
+
     try {
-      await login(username, password);
+      await login(submittedUsername, submittedPassword);
       navigate('/admin/clientes', { replace: true });
-    } catch {
-      setError('Credenciais inválidas. Verifique usuário e senha.');
+    } catch (err) {
+      const message = err instanceof Error ? err.message : '';
+      if (message === 'Unauthorized') {
+        setError('Credenciais inválidas. Verifique usuário e senha.');
+      } else {
+        setError('Não foi possível entrar. Confirme que o backend está rodando e tente novamente.');
+      }
     } finally {
       setSubmitting(false);
     }

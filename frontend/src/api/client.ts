@@ -7,13 +7,44 @@ export function getCsrfToken(): string | null {
   return readCsrfCookie();
 }
 
+let csrfBootstrapPromise: Promise<void> | null = null;
+
+export async function refreshCsrfToken(): Promise<void> {
+  const response = await fetch('/api/auth/csrf', { credentials: 'include' });
+  if (!response.ok) {
+    throw new Error('Failed to fetch CSRF token');
+  }
+}
+
+export async function ensureCsrfToken(): Promise<void> {
+  if (readCsrfCookie()) {
+    return;
+  }
+
+  if (!csrfBootstrapPromise) {
+    csrfBootstrapPromise = refreshCsrfToken().finally(() => {
+      csrfBootstrapPromise = null;
+    });
+  }
+
+  await csrfBootstrapPromise;
+}
+
 function readHeaders(init?: RequestInit): Headers {
   return new Headers(init?.headers);
 }
 
+function shouldRedirectToLoginOn401(): boolean {
+  const path = window.location.pathname;
+  if (path.startsWith('/login') || path.startsWith('/entrada')) {
+    return false;
+  }
+  return true;
+}
+
 async function handleResponse<T>(response: Response): Promise<T> {
   if (response.status === 401) {
-    if (!window.location.pathname.startsWith('/login')) {
+    if (shouldRedirectToLoginOn401()) {
       window.location.assign('/login');
     }
     throw new Error('Unauthorized');
@@ -53,38 +84,39 @@ export async function apiGet<T>(path: string, init?: RequestInit): Promise<T> {
   return handleResponse<T>(response);
 }
 
-export async function apiPost<T>(path: string, body?: unknown, init?: RequestInit): Promise<T> {
+function needsCsrfRefresh(path: string): boolean {
+  return path !== '/api/auth/login' && !path.startsWith('/api/access/');
+}
+
+async function fetchMutating<T>(
+  path: string,
+  method: 'POST' | 'PUT' | 'PATCH',
+  body?: unknown,
+  init?: RequestInit,
+): Promise<T> {
+  if (needsCsrfRefresh(path)) {
+    await refreshCsrfToken();
+  }
+
   const response = await fetch(
     path,
     withDefaults(path, {
       ...init,
-      method: 'POST',
+      method,
       body: body === undefined ? undefined : JSON.stringify(body),
     }),
   );
   return handleResponse<T>(response);
+}
+
+export async function apiPost<T>(path: string, body?: unknown, init?: RequestInit): Promise<T> {
+  return fetchMutating<T>(path, 'POST', body, init);
 }
 
 export async function apiPut<T>(path: string, body?: unknown, init?: RequestInit): Promise<T> {
-  const response = await fetch(
-    path,
-    withDefaults(path, {
-      ...init,
-      method: 'PUT',
-      body: body === undefined ? undefined : JSON.stringify(body),
-    }),
-  );
-  return handleResponse<T>(response);
+  return fetchMutating<T>(path, 'PUT', body, init);
 }
 
 export async function apiPatch<T>(path: string, body?: unknown, init?: RequestInit): Promise<T> {
-  const response = await fetch(
-    path,
-    withDefaults(path, {
-      ...init,
-      method: 'PATCH',
-      body: body === undefined ? undefined : JSON.stringify(body),
-    }),
-  );
-  return handleResponse<T>(response);
+  return fetchMutating<T>(path, 'PATCH', body, init);
 }

@@ -7,6 +7,7 @@ export interface RecognitionFeedback {
   outcome: AccessOutcome;
   nome?: string;
   fotoUrl?: string;
+  clienteId?: number;
   visible: boolean;
 }
 
@@ -26,6 +27,7 @@ export interface UseRecognitionLoopResult {
 
 const DEFAULT_INTERVAL_MS = 800;
 const DEFAULT_FEEDBACK_SECONDS = 3;
+const WELCOME_UI_COOLDOWN_MS = 30_000;
 
 export function useRecognitionLoop(
   options: UseRecognitionLoopOptions = {},
@@ -40,6 +42,8 @@ export function useRecognitionLoop(
   const processingRef = useRef(false);
   const feedbackActiveRef = useRef(false);
   const feedbackTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const lastWelcomeRef = useRef<{ clienteId: number; at: number } | null>(null);
+  const noFaceStreakRef = useRef(0);
 
   const cameraOnline = isReady && error === null;
 
@@ -80,15 +84,37 @@ export function useRecognitionLoop(
 
         setMultiFaceWarning(false);
 
-        if (response.faceCount === 0 || response.outcome === null) {
+        if (response.faceCount === 0) {
+          noFaceStreakRef.current += 1;
+          if (noFaceStreakRef.current >= 3) {
+            lastWelcomeRef.current = null;
+          }
           return;
         }
 
+        noFaceStreakRef.current = 0;
+
+        if (response.faceCount !== 1 || response.outcome !== 'LIBERADO' || !response.nome) {
+          return;
+        }
+
+        const now = Date.now();
+        const lastWelcome = lastWelcomeRef.current;
+        if (
+          lastWelcome &&
+          lastWelcome.clienteId === response.clienteId &&
+          now - lastWelcome.at < WELCOME_UI_COOLDOWN_MS
+        ) {
+          return;
+        }
+
+        lastWelcomeRef.current = { clienteId: response.clienteId!, at: now };
         feedbackActiveRef.current = true;
         setFeedback({
-          outcome: response.outcome,
-          nome: response.nome ?? undefined,
+          outcome: 'LIBERADO',
+          nome: response.nome,
           fotoUrl: response.fotoUrl ?? undefined,
+          clienteId: response.clienteId ?? undefined,
           visible: true,
         });
 

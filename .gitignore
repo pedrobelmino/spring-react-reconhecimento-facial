@@ -1,6 +1,7 @@
 node_modules/
 dist/
 backend/target/
+backend/data/
 backend/src/main/resources/static/
 backend/src/main/resources/models/*.onnx
 *.log

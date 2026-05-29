@@ -1,0 +1,260 @@
+{
+  "syncedAt": "2026-05-29T00:28:31.674Z",
+  "team": {
+    "key": "FAC",
+    "name": "Face Access"
+  },
+  "project": {
+    "name": "Academia Face Access",
+    "url": "https://linear.app/peraai/project/academia-face-access-acf62f8ac2dc"
+  },
+  "assignee": "pedrobelmino",
+  "issues": [
+    {
+      "key": "F-T1",
+      "identifier": "FAC-10",
+      "url": "https://linear.app/peraai/issue/FAC-10/f-t1-backend-spring-boot-scaffold",
+      "status": "done"
+    },
+    {
+      "key": "F-T2",
+      "identifier": "FAC-11",
+      "url": "https://linear.app/peraai/issue/FAC-11/f-t2-flyway-schema-v1",
+      "status": "done"
+    },
+    {
+      "key": "F-T3",
+      "identifier": "FAC-12",
+      "url": "https://linear.app/peraai/issue/FAC-12/f-t3-jpa-entities",
+      "status": "done"
+    },
+    {
+      "key": "F-T4",
+      "identifier": "FAC-13",
+      "url": "https://linear.app/peraai/issue/FAC-13/f-t4-jpa-repositories",
+      "status": "done"
+    },
+    {
+      "key": "F-T5",
+      "identifier": "FAC-14",
+      "url": "https://linear.app/peraai/issue/FAC-14/f-t5-docker-compose-mysql-dev",
+      "status": "done"
+    },
+    {
+      "key": "F-T6",
+      "identifier": "FAC-15",
+      "url": "https://linear.app/peraai/issue/FAC-15/f-t6-cpfvalidator",
+      "status": "done"
+    },
+    {
+      "key": "F-T7",
+      "identifier": "FAC-16",
+      "url": "https://linear.app/peraai/issue/FAC-16/f-t7-imagestorageservice-local",
+      "status": "done"
+    },
+    {
+      "key": "F-T8",
+      "identifier": "FAC-17",
+      "url": "https://linear.app/peraai/issue/FAC-17/f-t8-admin-user-seed-v2",
+      "status": "done"
+    },
+    {
+      "key": "F-T9",
+      "identifier": "FAC-18",
+      "url": "https://linear.app/peraai/issue/FAC-18/f-t9-securityconfig-cors-csrf",
+      "status": "done"
+    },
+    {
+      "key": "F-T10",
+      "identifier": "FAC-19",
+      "url": "https://linear.app/peraai/issue/FAC-19/f-t10-webconfig-spa-fallback",
+      "status": "done"
+    },
+    {
+      "key": "F-T11",
+      "identifier": "FAC-20",
+      "url": "https://linear.app/peraai/issue/FAC-20/f-t11-frontend-vite-react-tailwind",
+      "status": "done"
+    },
+    {
+      "key": "F-T12",
+      "identifier": "FAC-21",
+      "url": "https://linear.app/peraai/issue/FAC-21/f-t12-react-router-shell",
+      "status": "done"
+    },
+    {
+      "key": "F-T13",
+      "identifier": "FAC-22",
+      "url": "https://linear.app/peraai/issue/FAC-22/f-t13-api-client-fetch-wrapper",
+      "status": "done"
+    },
+    {
+      "key": "F-T14",
+      "identifier": "FAC-23",
+      "url": "https://linear.app/peraai/issue/FAC-23/f-t14-facerecognitionconfig-djl",
+      "status": "done"
+    },
+    {
+      "key": "F-T15",
+      "identifier": "FAC-24",
+      "url": "https://linear.app/peraai/issue/FAC-24/f-t15-facerecognitionservice",
+      "status": "done"
+    },
+    {
+      "key": "F-T16",
+      "identifier": "FAC-25",
+      "url": "https://linear.app/peraai/issue/FAC-25/f-t16-frontend-vitest-setup",
+      "status": "done"
+    },
+    {
+      "key": "F-T17",
+      "identifier": "FAC-26",
+      "url": "https://linear.app/peraai/issue/FAC-26/f-t17-dockerfile-build-script",
+      "status": "done"
+    },
+    {
+      "key": "C-T1",
+      "identifier": "FAC-27",
+      "url": "https://linear.app/peraai/issue/FAC-27/c-t1-authcontroller-rest",
+      "status": "done"
+    },
+    {
+      "key": "C-T2",
+      "identifier": "FAC-28",
+      "url": "https://linear.app/peraai/issue/FAC-28/c-t2-authapi-useauth-authprovider",
+      "status": "done"
+    },
+    {
+      "key": "C-T3",
+      "identifier": "FAC-29",
+      "url": "https://linear.app/peraai/issue/FAC-29/c-t3-protectedroute-loginpage",
+      "status": "done"
+    },
+    {
+      "key": "C-T4",
+      "identifier": "FAC-30",
+      "url": "https://linear.app/peraai/issue/FAC-30/c-t4-adminlayout",
+      "status": "done"
+    },
+    {
+      "key": "C-T5",
+      "identifier": "FAC-31",
+      "url": "https://linear.app/peraai/issue/FAC-31/c-t5-clienteservice",
+      "status": "done"
+    },
+    {
+      "key": "C-T6",
+      "identifier": "FAC-32",
+      "url": "https://linear.app/peraai/issue/FAC-32/c-t6-clientecontroller-rest",
+      "status": "done"
+    },
+    {
+      "key": "C-T7",
+      "identifier": "FAC-33",
+      "url": "https://linear.app/peraai/issue/FAC-33/c-t7-usewebcam-hook",
+      "status": "done"
+    },
+    {
+      "key": "C-T8",
+      "identifier": "FAC-34",
+      "url": "https://linear.app/peraai/issue/FAC-34/c-t8-facevalidationcontroller",
+      "status": "done"
+    },
+    {
+      "key": "C-T9",
+      "identifier": "FAC-35",
+      "url": "https://linear.app/peraai/issue/FAC-35/c-t9-webcamcapture-component",
+      "status": "done"
+    },
+    {
+      "key": "C-T10",
+      "identifier": "FAC-36",
+      "url": "https://linear.app/peraai/issue/FAC-36/c-t10-facecapturewizard",
+      "status": "done"
+    },
+    {
+      "key": "C-T11",
+      "identifier": "FAC-37",
+      "url": "https://linear.app/peraai/issue/FAC-37/c-t11-clientesapi-module",
+      "status": "done"
+    },
+    {
+      "key": "C-T12",
+      "identifier": "FAC-38",
+      "url": "https://linear.app/peraai/issue/FAC-38/c-t12-clientelistpage",
+      "status": "done"
+    },
+    {
+      "key": "C-T13",
+      "identifier": "FAC-39",
+      "url": "https://linear.app/peraai/issue/FAC-39/c-t13-clienteformpage",
+      "status": "done"
+    },
+    {
+      "key": "C-T14",
+      "identifier": "FAC-40",
+      "url": "https://linear.app/peraai/issue/FAC-40/c-t14-facesapi-module",
+      "status": "done"
+    },
+    {
+      "key": "C-T15",
+      "identifier": "FAC-41",
+      "url": "https://linear.app/peraai/issue/FAC-41/c-t15-cadastro-integration-smoke",
+      "status": "done"
+    },
+    {
+      "key": "E-T1",
+      "identifier": "FAC-42",
+      "url": "https://linear.app/peraai/issue/FAC-42/e-t1-accesseventservice",
+      "status": "done"
+    },
+    {
+      "key": "E-T2",
+      "identifier": "FAC-43",
+      "url": "https://linear.app/peraai/issue/FAC-43/e-t2-accesscontroller-rest",
+      "status": "done"
+    },
+    {
+      "key": "E-T3",
+      "identifier": "FAC-44",
+      "url": "https://linear.app/peraai/issue/FAC-44/e-t3-accessapi-module",
+      "status": "done"
+    },
+    {
+      "key": "E-T4",
+      "identifier": "FAC-45",
+      "url": "https://linear.app/peraai/issue/FAC-45/e-t4-accessfeedbackoverlay",
+      "status": "done"
+    },
+    {
+      "key": "E-T5",
+      "identifier": "FAC-46",
+      "url": "https://linear.app/peraai/issue/FAC-46/e-t5-camerastatusindicator",
+      "status": "done"
+    },
+    {
+      "key": "E-T6",
+      "identifier": "FAC-47",
+      "url": "https://linear.app/peraai/issue/FAC-47/e-t6-userecognitionloop-hook",
+      "status": "done"
+    },
+    {
+      "key": "E-T7",
+      "identifier": "FAC-48",
+      "url": "https://linear.app/peraai/issue/FAC-48/e-t7-entradapage",
+      "status": "done"
+    },
+    {
+      "key": "E-T8",
+      "identifier": "FAC-49",
+      "url": "https://linear.app/peraai/issue/FAC-49/e-t8-useaccesssound-hook-p3",
+      "status": "done"
+    },
+    {
+      "key": "E-T9",
+      "identifier": "FAC-50",
+      "url": "https://linear.app/peraai/issue/FAC-50/e-t9-entrada-integration-smoke-uat",
+      "status": "done"
+    }
+  ]
+}

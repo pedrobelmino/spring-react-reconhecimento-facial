@@ -35,18 +35,19 @@ describe('EntradaPage', () => {
     cleanup();
   });
 
-  it('renders fullscreen layout with video preview', () => {
+  it('renders waiting state with compact camera preview', () => {
     render(<EntradaPage />);
 
-    const page = screen.getByTestId('entrada-page');
-    expect(page).toHaveClass('h-screen', 'w-screen');
+    expect(screen.getByTestId('waiting-state')).toHaveTextContent(/aguardando pessoa/i);
     expect(screen.getByTestId('entrada-video')).toBeInTheDocument();
+    expect(screen.getByTestId('entrada-page')).not.toHaveClass('overflow-hidden');
   });
 
-  it('shows camera status indicator', () => {
+  it('shows camera status dot', () => {
     render(<EntradaPage />);
 
     expect(screen.getByTestId('camera-status-indicator')).toBeInTheDocument();
+    expect(screen.getByTestId('camera-status-dot')).toHaveClass('bg-emerald-400');
   });
 
   it('shows empty base banner when operacional is false', async () => {
@@ -58,36 +59,46 @@ describe('EntradaPage', () => {
     render(<EntradaPage />);
 
     await waitFor(() => {
-      expect(screen.getByTestId('empty-base-banner')).toHaveTextContent(
-        /nenhum cliente cadastrado/i,
-      );
+      expect(screen.getByTestId('empty-base-banner')).toHaveTextContent(/aguardando cadastro/i);
     });
   });
 
-  it('shows multi-face warning when multiple faces detected', () => {
+  it('shows friendly multi-face warning', () => {
     mockRecognitionLoop({ multiFaceWarning: true });
 
     render(<EntradaPage />);
 
-    expect(screen.getByTestId('multi-face-warning')).toHaveTextContent(
-      /posicione apenas uma pessoa/i,
-    );
+    expect(screen.getByTestId('multi-face-warning')).toHaveTextContent(/fique sozinho/i);
   });
 
-  it('shows access feedback overlay when recognition feedback is active', () => {
+  it('shows welcome card when client is recognized', () => {
     mockRecognitionLoop({
       feedback: {
         outcome: 'LIBERADO',
         nome: 'João Silva',
         fotoUrl: '/api/clientes/1/foto/1',
+        clienteId: 1,
         visible: true,
       },
     });
 
     render(<EntradaPage />);
 
-    expect(screen.getByTestId('access-feedback-overlay')).toBeInTheDocument();
-    expect(screen.getByText('João Silva')).toBeInTheDocument();
-    expect(screen.getByText('Acesso liberado')).toBeInTheDocument();
+    expect(screen.getByTestId('welcome-guest-card')).toBeInTheDocument();
+    expect(screen.getByText('João')).toBeInTheDocument();
+    expect(screen.queryByTestId('waiting-state')).not.toBeInTheDocument();
+    expect(screen.queryByText(/acesso liberado/i)).not.toBeInTheDocument();
+  });
+
+  it('shows friendly camera error without technical message', () => {
+    mockRecognitionLoop({
+      cameraOnline: false,
+      cameraError: 'Permission denied by system',
+    });
+
+    render(<EntradaPage />);
+
+    expect(screen.getByTestId('camera-error-panel')).toHaveTextContent(/não foi possível usar a câmera/i);
+    expect(screen.queryByText(/permission denied/i)).not.toBeInTheDocument();
   });
 });

@@ -5,6 +5,9 @@ import AdminLayout from './AdminLayout';
 import * as authHook from '../hooks/useAuth';
 
 vi.mock('../hooks/useAuth');
+vi.mock('../api/client', () => ({
+  refreshCsrfToken: vi.fn().mockResolvedValue(undefined),
+}));
 
 const mockLogout = vi.fn();
 const mockNavigate = vi.fn();
@@ -41,7 +44,9 @@ describe('AdminLayout', () => {
       </MemoryRouter>,
     );
 
-    expect(screen.getByRole('link', { name: /clientes/i })).toHaveAttribute('href', '/admin/clientes');
+    expect(screen.getByRole('link', { name: /^clientes$/i })).toHaveAttribute('href', '/admin/clientes');
+    expect(screen.getByRole('link', { name: /novo cliente/i })).toHaveAttribute('href', '/admin/clientes/novo');
+    expect(screen.getByRole('link', { name: /tela de entrada/i })).toHaveAttribute('href', '/entrada');
     expect(screen.getByRole('button', { name: /sair/i })).toBeInTheDocument();
     expect(screen.getByText('admin')).toBeInTheDocument();
   });

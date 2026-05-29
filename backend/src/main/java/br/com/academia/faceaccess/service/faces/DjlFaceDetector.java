@@ -74,6 +74,7 @@ public class DjlFaceDetector implements FaceDetector, AutoCloseable {
                     .setTypes(Image.class, DetectedObjects.class)
                     .optEngine("OnnxRuntime")
                     .optModelPath(path)
+                    .optTranslator(new UltraLightFaceDetectorTranslator())
                     .build();
             model = criteria.loadModel();
             predictor = model.newPredictor();

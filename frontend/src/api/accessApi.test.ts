@@ -1,9 +1,14 @@
-import { afterEach, describe, expect, it, vi } from 'vitest';
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { getStatus, recognize } from './accessApi';
 
 describe('accessApi', () => {
+  beforeEach(() => {
+    document.cookie = 'XSRF-TOKEN=test-token';
+  });
+
   afterEach(() => {
     vi.unstubAllGlobals();
+    document.cookie = 'XSRF-TOKEN=; Max-Age=0';
   });
 
   it('recognize posts imageBase64 to /api/access/recognize', async () => {
@@ -56,6 +61,7 @@ describe('accessApi', () => {
   });
 
   it('recognize throws on non-ok response', async () => {
+    document.cookie = 'XSRF-TOKEN=test-token';
     vi.stubGlobal(
       'fetch',
       vi.fn().mockResolvedValue({

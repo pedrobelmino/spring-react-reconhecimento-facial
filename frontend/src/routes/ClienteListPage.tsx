@@ -151,15 +151,23 @@ export default function ClienteListPage() {
                       {formatDate(cliente.createdAt)}
                     </td>
                     <td className="whitespace-nowrap px-4 py-3 text-right text-sm">
-                      <button
-                        type="button"
-                        aria-label={toggleLabel}
-                        disabled={togglingId === cliente.id}
-                        onClick={() => handleToggleStatus(cliente)}
-                        className="rounded-md border border-gray-300 bg-white px-3 py-1.5 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 disabled:cursor-not-allowed disabled:opacity-50"
-                      >
-                        {isAtivo ? 'Desativar' : 'Ativar'}
-                      </button>
+                      <div className="flex justify-end gap-2">
+                        <Link
+                          to={`/admin/clientes/${cliente.id}/editar`}
+                          className="rounded-md border border-gray-300 bg-white px-3 py-1.5 text-sm font-medium text-indigo-600 shadow-sm hover:bg-gray-50"
+                        >
+                          Editar
+                        </Link>
+                        <button
+                          type="button"
+                          aria-label={toggleLabel}
+                          disabled={togglingId === cliente.id}
+                          onClick={() => handleToggleStatus(cliente)}
+                          className="rounded-md border border-gray-300 bg-white px-3 py-1.5 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 disabled:cursor-not-allowed disabled:opacity-50"
+                        >
+                          {isAtivo ? 'Desativar' : 'Ativar'}
+                        </button>
+                      </div>
                     </td>
                   </tr>
                 );

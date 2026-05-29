@@ -1,7 +1,8 @@
 # State
 
 **Last Updated:** 2026-05-28
-**Current Work:** MVP P1 concluído (platform + cadastro + entrada) — próximo: UAT manual ou Linear sync
+**Repositório:** [github.com/pedrobelmino/spring-react-reconhecimento-facial](https://github.com/pedrobelmino/spring-react-reconhecimento-facial)
+**Current Work:** MVP P1 concluído — próximo: UAT manual e deploy GCP
 
 ---
 
@@ -81,12 +82,14 @@ _Nenhuma lição registrada ainda._
 
 ## Todos
 
-- [ ] **Linear:** autenticar plugin MCP ou rodar `scripts/sync-linear-tasks.mjs`
+- [x] **Linear:** 41 issues FAC-10…FAC-50 em [Academia Face Access](https://linear.app/peraai/project/academia-face-access-acf62f8ac2dc)
+- [x] **GitHub:** código publicado em [spring-react-reconhecimento-facial](https://github.com/pedrobelmino/spring-react-reconhecimento-facial)
 - [x] platform-foundation T1–T17
 - [x] cadastro-clientes-faces T1–T15
 - [x] tela-entrada T1–T9
 - [ ] UAT manual: `.specs/features/tela-entrada/UAT.md`
 - [ ] Modelos ONNX: `./scripts/download-face-models.sh` (inferência real)
+- [ ] Deploy GCP (Cloud Run)
 
 ---
 

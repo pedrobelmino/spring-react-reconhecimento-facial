@@ -1,13 +1,22 @@
 import { Link, Outlet, useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
+import { refreshCsrfToken } from '../api/client';
 import { useAuth } from '../hooks/useAuth';
 
 export default function AdminLayout() {
   const { user, logout } = useAuth();
   const navigate = useNavigate();
 
+  useEffect(() => {
+    void refreshCsrfToken();
+  }, []);
+
   async function handleLogout() {
-    await logout();
-    navigate('/login', { replace: true });
+    try {
+      await logout();
+    } finally {
+      navigate('/login', { replace: true });
+    }
   }
 
   return (
@@ -22,6 +31,20 @@ export default function AdminLayout() {
             >
               Clientes
             </Link>
+            <Link
+              to="/admin/clientes/novo"
+              className="text-sm font-medium text-indigo-600 hover:text-indigo-500"
+            >
+              Novo cliente
+            </Link>
+            <a
+              href="/entrada"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm font-medium text-gray-600 hover:text-gray-900"
+            >
+              Tela de entrada ↗
+            </a>
           </div>
           <div className="flex items-center gap-4">
             {user && <span className="text-sm text-gray-600">{user.username}</span>}

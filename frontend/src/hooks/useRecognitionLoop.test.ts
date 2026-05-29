@@ -96,11 +96,12 @@ describe('useRecognitionLoop', () => {
       outcome: 'LIBERADO',
       nome: 'João Silva',
       fotoUrl: '/api/clientes/1/foto/1',
+      clienteId: 1,
       visible: true,
     });
   });
 
-  it('shows feedback on NEGADO response', async () => {
+  it('does not show feedback on NEGADO response', async () => {
     vi.mocked(accessApi.recognize).mockResolvedValue({
       outcome: 'NEGADO',
       motivo: 'NAO_RECONHECIDO',
@@ -118,10 +119,31 @@ describe('useRecognitionLoop', () => {
       await vi.advanceTimersByTimeAsync(800);
     });
 
-    expect(result.current.feedback).toEqual({
-      outcome: 'NEGADO',
-      visible: true,
+    expect(result.current.feedback).toBeNull();
+  });
+
+  it('does not repeat welcome for same client within cooldown', async () => {
+    const { result } = renderHook(() =>
+      useRecognitionLoop({ intervalMs: 800, feedbackSeconds: 1 }),
+    );
+
+    await act(async () => {
+      await vi.advanceTimersByTimeAsync(800);
     });
+
+    expect(result.current.feedback?.nome).toBe('João Silva');
+
+    await act(async () => {
+      await vi.advanceTimersByTimeAsync(1000);
+    });
+
+    expect(result.current.feedback).toBeNull();
+
+    await act(async () => {
+      await vi.advanceTimersByTimeAsync(800);
+    });
+
+    expect(result.current.feedback).toBeNull();
   });
 
   it('pauses recognition during feedback period', async () => {
