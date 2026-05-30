@@ -6,9 +6,9 @@ Clientes da academia precisam entrar sem cartão ou check-in manual. A recepçã
 
 ## Goals
 
-- [ ] Reconhecer clientes cadastrados e exibir resultado (liberado/negado) em ≤ 2 segundos por tentativa.
-- [ ] Registrar no máximo 1 evento de acesso por cliente a cada 5 minutos.
-- [ ] Taxa de reconhecimento ≥ 95% em condições normais (iluminação adequada, rosto frontal, uma pessoa na câmera).
+- [x] Reconhecer clientes cadastrados e exibir resultado (liberado/negado) em ≤ 2 segundos por tentativa.
+- [x] Registrar no máximo 1 evento de acesso por cliente a cada 5 minutos.
+- [ ] Taxa de reconhecimento ≥ 95% em condições normais (iluminação adequada, rosto frontal, uma pessoa na câmera). _Validação pendente em UAT manual_
 
 ## Out of Scope
 
@@ -152,37 +152,37 @@ Clientes da academia precisam entrar sem cartão ou check-in manual. A recepçã
 
 | Requirement ID | Story | Phase | Status |
 | -------------- | ----- | ----- | ------ |
-| ENT-01 | P1: Captura e reconhecimento | Tasks | Pending |
-| ENT-02 | P1: Captura e reconhecimento | Tasks | Pending |
-| ENT-03 | P1: Captura e reconhecimento | Tasks | Pending |
-| ENT-04 | P1: Captura e reconhecimento | Tasks | Pending |
-| ENT-05 | P1: Captura e reconhecimento | Tasks | Pending |
-| ENT-06 | P1: Feedback liberado | Tasks | Pending |
-| ENT-07 | P1: Feedback liberado | Tasks | Pending |
-| ENT-08 | P1: Feedback liberado | Tasks | Pending |
-| ENT-09 | P1: Feedback negado | Tasks | Pending |
-| ENT-10 | P1: Feedback negado | Tasks | Pending |
-| ENT-11 | P1: Feedback negado | Tasks | Pending |
-| ENT-12 | P1: Cooldown 5 min | Tasks | Pending |
-| ENT-13 | P1: Cooldown 5 min | Tasks | Pending |
-| ENT-14 | P1: Cooldown 5 min | Tasks | Pending |
-| ENT-15 | P1: Cooldown 5 min | Tasks | Pending |
-| ENT-16 | P1: Registro de eventos | Tasks | Pending |
-| ENT-17 | P1: Registro de eventos | Tasks | Pending |
-| ENT-18 | P1: Registro de eventos | Tasks | Pending |
-| ENT-19 | P2: Status da câmera | Tasks | Pending |
-| ENT-20 | P2: Status da câmera | Tasks | Pending |
-| ENT-21 | P3: Som de feedback | Tasks | Pending |
-| ENT-22 | P3: Som de feedback | Tasks | Pending |
+| ENT-01 | P1: Captura e reconhecimento | Execute | Done |
+| ENT-02 | P1: Captura e reconhecimento | Execute | Done |
+| ENT-03 | P1: Captura e reconhecimento | Execute | Done |
+| ENT-04 | P1: Captura e reconhecimento | Execute | Done |
+| ENT-05 | P1: Captura e reconhecimento | Execute | Done |
+| ENT-06 | P1: Feedback liberado | Execute | Done |
+| ENT-07 | P1: Feedback liberado | Execute | Done |
+| ENT-08 | P1: Feedback liberado | Execute | Done |
+| ENT-09 | P1: Feedback negado | Execute | Done |
+| ENT-10 | P1: Feedback negado | Execute | Done |
+| ENT-11 | P1: Feedback negado | Execute | Done |
+| ENT-12 | P1: Cooldown 5 min | Execute | Done |
+| ENT-13 | P1: Cooldown 5 min | Execute | Done |
+| ENT-14 | P1: Cooldown 5 min | Execute | Done |
+| ENT-15 | P1: Cooldown 5 min | Execute | Done |
+| ENT-16 | P1: Registro de eventos | Execute | Done |
+| ENT-17 | P1: Registro de eventos | Execute | Done |
+| ENT-18 | P1: Registro de eventos | Execute | Done |
+| ENT-19 | P2: Status da câmera | Execute | Done |
+| ENT-20 | P2: Status da câmera | Execute | Done |
+| ENT-21 | P3: Som de feedback | Execute | Done |
+| ENT-22 | P3: Som de feedback | Execute | Done |
 
-**Coverage:** 22 total, 0 mapeados para tasks, 22 unmapped ⚠️
+**Coverage:** 22 total, 22 mapeados para tasks, 0 unmapped ✅
 
 ---
 
 ## Success Criteria
 
-- [ ] Cliente ativo cadastrado é reconhecido e vê foto + "Acesso liberado" em ≤ 2 s.
-- [ ] Rosto desconhecido recebe "Acesso negado" sem foto de cliente.
-- [ ] Cliente inativo reconhecido recebe foto + nome + "Acesso negado".
-- [ ] Mesmo cliente ativo não gera mais de 1 evento `LIBERADO` a cada 5 minutos.
-- [ ] Eventos de acesso persistidos com timestamp e resultado corretos.
+- [x] Cliente ativo cadastrado é reconhecido e vê foto + "Acesso liberado" em ≤ 2 s.
+- [x] Rosto desconhecido recebe "Acesso negado" sem foto de cliente.
+- [x] Cliente inativo reconhecido recebe foto + nome + "Acesso negado".
+- [x] Mesmo cliente ativo não gera mais de 1 evento `LIBERADO` a cada 5 minutos.
+- [x] Eventos de acesso persistidos com timestamp e resultado corretos.

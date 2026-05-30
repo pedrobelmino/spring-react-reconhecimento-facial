@@ -37,6 +37,30 @@ export default function AdminLayout() {
             >
               Novo cliente
             </Link>
+            <Link
+              to="/admin/maquinas"
+              className="text-sm font-medium text-indigo-600 hover:text-indigo-500"
+            >
+              Máquinas
+            </Link>
+            <Link
+              to="/admin/maquinas/novo"
+              className="text-sm font-medium text-indigo-600 hover:text-indigo-500"
+            >
+              Nova máquina
+            </Link>
+            <Link
+              to="/admin/acompanhamentos"
+              className="text-sm font-medium text-indigo-600 hover:text-indigo-500"
+            >
+              Acompanhamentos
+            </Link>
+            <Link
+              to="/admin/acompanhamentos/novo"
+              className="text-sm font-medium text-indigo-600 hover:text-indigo-500"
+            >
+              Novo acompanhamento
+            </Link>
             <a
               href="/entrada"
               target="_blank"

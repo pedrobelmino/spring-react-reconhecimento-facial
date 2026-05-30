@@ -5,6 +5,10 @@ import ClienteFormPage from './routes/ClienteFormPage';
 import ClienteListPage from './routes/ClienteListPage';
 import EntradaPage from './routes/EntradaPage';
 import LoginPage from './routes/LoginPage';
+import AcompanhamentoFormPage from './routes/AcompanhamentoFormPage';
+import AcompanhamentoListPage from './routes/AcompanhamentoListPage';
+import MaquinaFormPage from './routes/MaquinaFormPage';
+import MaquinaListPage from './routes/MaquinaListPage';
 
 function HomePage() {
   return (
@@ -43,6 +47,12 @@ function App() {
             <Route path="/admin/clientes" element={<ClienteListPage />} />
             <Route path="/admin/clientes/novo" element={<ClienteFormPage />} />
             <Route path="/admin/clientes/:id/editar" element={<ClienteFormPage />} />
+            <Route path="/admin/maquinas" element={<MaquinaListPage />} />
+            <Route path="/admin/maquinas/novo" element={<MaquinaFormPage />} />
+            <Route path="/admin/maquinas/:id/editar" element={<MaquinaFormPage />} />
+            <Route path="/admin/acompanhamentos" element={<AcompanhamentoListPage />} />
+            <Route path="/admin/acompanhamentos/novo" element={<AcompanhamentoFormPage />} />
+            <Route path="/admin/acompanhamentos/:id/editar" element={<AcompanhamentoFormPage />} />
           </Route>
         </Route>
       </Routes>

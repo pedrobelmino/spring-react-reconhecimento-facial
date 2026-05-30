@@ -59,6 +59,8 @@ public class SecurityConfig {
                                 "/api/auth/logout",
                                 "/api/auth/me",
                                 "/api/clientes/**",
+                                "/api/maquinas/**",
+                                "/api/acompanhamentos/**",
                                 "/api/faces/**")
                         .authenticated()
                         .anyRequest().permitAll())
