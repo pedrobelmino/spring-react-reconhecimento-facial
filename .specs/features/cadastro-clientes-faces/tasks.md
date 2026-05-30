@@ -3,7 +3,7 @@
 **Design:** `.specs/features/cadastro-clientes-faces/design.md`  
 **Testing:** `.specs/codebase/TESTING.md`  
 **Depends on:** `.specs/features/platform-foundation/tasks.md` (T1-T16 complete)  
-**Status:** Draft
+**Status:** ✅ Done (2026-05-30)
 
 ---
 

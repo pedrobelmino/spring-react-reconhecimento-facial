@@ -6,9 +6,9 @@ A academia precisa registrar clientes e suas faces antes que o reconhecimento na
 
 ## Goals
 
-- [ ] Admin consegue cadastrar um cliente completo (dados + 2 fotos) em menos de 3 minutos.
-- [ ] 100% dos clientes ativos possuem exatamente 2 descritores faciais válidos armazenados antes de serem elegíveis para reconhecimento na entrada.
-- [ ] Apenas usuários autenticados acessam as telas de cadastro e gestão.
+- [x] Admin consegue cadastrar um cliente completo (dados + 2 fotos) em menos de 3 minutos.
+- [x] 100% dos clientes ativos possuem exatamente 2 descritores faciais válidos armazenados antes de serem elegíveis para reconhecimento na entrada.
+- [x] Apenas usuários autenticados acessam as telas de cadastro e gestão.
 
 ## Out of Scope
 
@@ -137,35 +137,35 @@ A academia precisa registrar clientes e suas faces antes que o reconhecimento na
 
 | Requirement ID | Story | Phase | Status |
 | -------------- | ----- | ----- | ------ |
-| CAD-01 | P1: Login do administrador | Tasks | Pending |
-| CAD-02 | P1: Login do administrador | Tasks | Pending |
-| CAD-03 | P1: Login do administrador | Tasks | Pending |
-| CAD-04 | P1: Login do administrador | Tasks | Pending |
-| CAD-05 | P1: Cadastrar cliente | Tasks | Pending |
-| CAD-06 | P1: Cadastrar cliente | Tasks | Pending |
-| CAD-07 | P1: Cadastrar cliente | Tasks | Pending |
-| CAD-08 | P1: Cadastrar cliente | Tasks | Pending |
-| CAD-09 | P1: Cadastrar cliente | Tasks | Pending |
-| CAD-10 | P1: Listar clientes | Tasks | Pending |
-| CAD-11 | P1: Listar clientes | Tasks | Pending |
-| CAD-12 | P1: Listar clientes | Tasks | Pending |
-| CAD-13 | P2: Editar dados e fotos | Tasks | Pending |
-| CAD-14 | P2: Editar dados e fotos | Tasks | Pending |
-| CAD-15 | P2: Editar dados e fotos | Tasks | Pending |
-| CAD-16 | P2: Editar dados e fotos | Tasks | Pending |
-| CAD-17 | P2: Ativar/desativar | Tasks | Pending |
-| CAD-18 | P2: Ativar/desativar | Tasks | Pending |
-| CAD-19 | P2: Ativar/desativar | Tasks | Pending |
-| CAD-20 | P3: Buscar cliente | Tasks | Pending |
-| CAD-21 | P3: Buscar cliente | Tasks | Pending |
+| CAD-01 | P1: Login do administrador | Execute | Done |
+| CAD-02 | P1: Login do administrador | Execute | Done |
+| CAD-03 | P1: Login do administrador | Execute | Done |
+| CAD-04 | P1: Login do administrador | Execute | Done |
+| CAD-05 | P1: Cadastrar cliente | Execute | Done |
+| CAD-06 | P1: Cadastrar cliente | Execute | Done |
+| CAD-07 | P1: Cadastrar cliente | Execute | Done |
+| CAD-08 | P1: Cadastrar cliente | Execute | Done |
+| CAD-09 | P1: Cadastrar cliente | Execute | Done |
+| CAD-10 | P1: Listar clientes | Execute | Done |
+| CAD-11 | P1: Listar clientes | Execute | Done |
+| CAD-12 | P1: Listar clientes | Execute | Done |
+| CAD-13 | P2: Editar dados e fotos | Execute | Done |
+| CAD-14 | P2: Editar dados e fotos | Execute | Done |
+| CAD-15 | P2: Editar dados e fotos | Execute | Done |
+| CAD-16 | P2: Editar dados e fotos | Execute | Done |
+| CAD-17 | P2: Ativar/desativar | Execute | Done |
+| CAD-18 | P2: Ativar/desativar | Execute | Done |
+| CAD-19 | P2: Ativar/desativar | Execute | Done |
+| CAD-20 | P3: Buscar cliente | Execute | Done |
+| CAD-21 | P3: Buscar cliente | Execute | Done |
 
-**Coverage:** 21 total, 0 mapeados para tasks, 21 unmapped ⚠️
+**Coverage:** 21 total, 21 mapeados para tasks, 0 unmapped ✅
 
 ---
 
 ## Success Criteria
 
-- [ ] Admin autenticado cadastra cliente com 2 fotos válidas em ≤ 3 minutos.
-- [ ] CPF duplicado é sempre rejeitado.
-- [ ] Cliente cadastrado aparece na listagem imediatamente após salvamento.
-- [ ] Telas de cadastro inacessíveis sem login autenticado.
+- [x] Admin autenticado cadastra cliente com 2 fotos válidas em ≤ 3 minutos.
+- [x] CPF duplicado é sempre rejeitado.
+- [x] Cliente cadastrado aparece na listagem imediatamente após salvamento.
+- [x] Telas de cadastro inacessíveis sem login autenticado.

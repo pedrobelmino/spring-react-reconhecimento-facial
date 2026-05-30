@@ -3,7 +3,7 @@
 **Design:** `.specs/features/tela-entrada/design.md`  
 **Testing:** `.specs/codebase/TESTING.md`  
 **Depends on:** platform-foundation (T1-T16), cadastro backend (T5, T6) para base facial  
-**Status:** Draft
+**Status:** ✅ Done (2026-05-30)
 
 ---
 

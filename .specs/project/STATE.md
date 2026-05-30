@@ -1,8 +1,8 @@
 # State
 
-**Last Updated:** 2026-05-28
+**Last Updated:** 2026-05-30
 **Repositório:** [github.com/pedrobelmino/spring-react-reconhecimento-facial](https://github.com/pedrobelmino/spring-react-reconhecimento-facial)
-**Current Work:** MVP P1 concluído — próximo: UAT manual e deploy GCP
+**Current Work:** cadastro-maquinas + acompanhamento-nutricional implementados (128 frontend + backend tests pass)
 
 ---
 
@@ -84,9 +84,9 @@ _Nenhuma lição registrada ainda._
 
 - [x] **Linear:** 41 issues FAC-10…FAC-50 em [Academia Face Access](https://linear.app/peraai/project/academia-face-access-acf62f8ac2dc)
 - [x] **GitHub:** código publicado em [spring-react-reconhecimento-facial](https://github.com/pedrobelmino/spring-react-reconhecimento-facial)
-- [x] platform-foundation T1–T17
-- [x] cadastro-clientes-faces T1–T15
-- [x] tela-entrada T1–T9
+- [x] platform-foundation T1–T17 _(fechado 2026-05-30)_
+- [x] cadastro-clientes-faces T1–T15 _(fechado 2026-05-30)_
+- [x] tela-entrada T1–T9 _(fechado 2026-05-30)_
 - [ ] UAT manual: `.specs/features/tela-entrada/UAT.md`
 - [ ] Modelos ONNX: `./scripts/download-face-models.sh` (inferência real)
 - [ ] Deploy GCP (Cloud Run)

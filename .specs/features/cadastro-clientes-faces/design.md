@@ -2,7 +2,7 @@
 
 **Spec:** `.specs/features/cadastro-clientes-faces/spec.md`  
 **Arquitetura compartilhada:** `.specs/project/SYSTEM-DESIGN.md`  
-**Status:** Draft
+**Status:** ✅ Done (2026-05-30)
 
 ---
 

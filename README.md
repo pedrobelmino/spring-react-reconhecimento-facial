@@ -90,6 +90,26 @@ Defina `ADMIN_PASSWORD` **antes** do primeiro `flyway migrate` se quiser outra s
 
 **Rotas:** `/login`, `/admin/clientes`, `/admin/clientes/novo`, `/admin/clientes/:id/editar`
 
+### Cadastro de máquinas (`/admin/maquinas`)
+
+Área **protegida** (mesmo login admin) para gestão do parque de equipamentos.
+
+1. Após login, use **Máquinas** no menu admin ou acesse `/admin/maquinas`.
+2. **Nova máquina** → nome, tipo (cardio/musculação/funcional/outro), código de patrimônio (opcional), observações.
+3. Listagem: busca por nome/patrimônio, ciclo de status (ativa → manutenção → inativa), editar.
+
+**Rotas:** `/admin/maquinas`, `/admin/maquinas/novo`, `/admin/maquinas/:id/editar`
+
+### Acompanhamento nutricional (`/admin/acompanhamentos`)
+
+Área **protegida** (mesmo login admin) para registro de consultas nutricionais vinculadas a clientes.
+
+1. Após login, use **Acompanhamentos** no menu admin ou acesse `/admin/acompanhamentos`.
+2. **Novo acompanhamento** → selecionar cliente, data da consulta, peso (opcional), profissional, objetivo, orientações e próxima consulta (opcional).
+3. Listagem: filtro por cliente, busca textual, ordenação por data da consulta (mais recente primeiro), ativar/inativar, editar.
+
+**Rotas:** `/admin/acompanhamentos`, `/admin/acompanhamentos/novo`, `/admin/acompanhamentos/:id/editar`
+
 ### Tela de entrada (`/entrada`)
 
 Tela **pública** (sem login) para reconhecimento na portaria.

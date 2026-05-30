@@ -44,6 +44,10 @@
 
 ### Features
 
+**Cadastro de máquinas** — ✅ DONE
+
+**Acompanhamento nutricional** — ✅ DONE
+
 **Multi-empresa (multi-tenant)** — PLANNED
 
 - Isolamento de dados por academia

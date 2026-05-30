@@ -1,7 +1,10 @@
 package br.com.academia.faceaccess.web;
 
+import br.com.academia.faceaccess.service.exception.AcompanhamentoNotFoundException;
 import br.com.academia.faceaccess.service.exception.ClienteNotFoundException;
 import br.com.academia.faceaccess.service.exception.DuplicateCpfException;
+import br.com.academia.faceaccess.service.exception.DuplicatePatrimonioException;
+import br.com.academia.faceaccess.service.exception.MaquinaNotFoundException;
 import java.util.Map;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -19,6 +22,22 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(ClienteNotFoundException.class)
     ResponseEntity<Map<String, String>> handleNotFound(ClienteNotFoundException ex) {
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(Map.of("message", ex.getMessage()));
+    }
+
+    @ExceptionHandler(DuplicatePatrimonioException.class)
+    ResponseEntity<Map<String, String>> handleDuplicatePatrimonio() {
+        return ResponseEntity.status(HttpStatus.CONFLICT)
+                .body(Map.of("message", "Código de patrimônio já cadastrado"));
+    }
+
+    @ExceptionHandler(MaquinaNotFoundException.class)
+    ResponseEntity<Map<String, String>> handleMaquinaNotFound(MaquinaNotFoundException ex) {
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(Map.of("message", ex.getMessage()));
+    }
+
+    @ExceptionHandler(AcompanhamentoNotFoundException.class)
+    ResponseEntity<Map<String, String>> handleAcompanhamentoNotFound(AcompanhamentoNotFoundException ex) {
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(Map.of("message", ex.getMessage()));
     }
 
